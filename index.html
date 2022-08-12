@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toni To Do</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+  <div class="container text-center">
+    <h1 class="mt-5 text-white display-4"><i class="bi bi-list-task"></i> Toni To Do&trade;</h1>
+
+    <!-- Bloque de adición de tareas -->
+    <form id="form1" class="shadow p-4 mt-5 bg-light bg-gradient rounded-3">
+      <div class="row g-2 justify-content-center align-items-center">
+        <div class="col-md-12 col-xl-8">
+          <input class="form-control col-auto shadow border-dark" name="inputTask" placeholder="Escribe aquí tu tarea" autocomplete="off" type="text">
+        </div>
+        <div class="col-auto">
+          <select class="form-select shadow border-dark" name="inputPriority" id="prioridad">
+            <option hidden disabled selected value>¿Qué prioridad tiene?</option>
+            <option value="normal">🟢 Normal</option>
+            <option value="intermedia">🟡 Intermedia</option>
+            <option value="urgente">🔴 Urgente</option>
+          </select>
+        </div>
+        <div class="col-auto">
+          <button id="btn" class="btn btn-outline-secondary border-dark shadow">Añadir tarea</button>
+        </div>
+      </div>
+    </form>
+
+    <!-- Bloque de búsqueda de tareas -->
+    <div class="border shadow p-3 mt-3 bg-gradient rounded-3">
+      <div class="row g-2 justify-content-center align-items-center">
+        <div class="col-auto">
+          <i class="bi bi-search text-white fs-4"></i>
+        </div>
+        <form id="form2" class="col-auto">
+          <select class="form-select" name="inputSearchPriority" id="prioridad" title="Selecciona una prioriodidad para buscar las tareas con ella">
+            <option hidden disabled selected>Busca por prioridad...</option>
+            <option value="normal">🟢 Normal</option>
+            <option value="intermedia">🟡 Intermedia</option>
+            <option value="urgente">🔴 Urgente</option>
+            <option value="todas">🚦 Todas las prioridades</option>
+          </select>
+        </form>
+        <form id="form3" class="col-auto">
+          <input class="form-control col-auto" name="inputSearch" placeholder="... o por nombre" autocomplete="off" type="text" title="Empieza a escribir para buscar">
+        </form>
+      </div>
+    </div>
+
+    <!-- Bloque de listado de tareas -->
+    <ul id="output" class="border p-4 mt-3 rounded shadow list-unstyled text-white d-flex flex-column align-items-center justify-content-center">
+    </ul>
+
+
+
+
+
+  </div>
+  <script src="js/main.js" type="module"></script>
+</body>
+
+</html>
